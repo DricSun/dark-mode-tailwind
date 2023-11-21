@@ -1,0 +1,81 @@
+<!-- src/index.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+<div class="dark:bg-slate-900 dark:text-white pb-8 text-sm">
+  <div class="w-full flex justify-center py-8">
+    <button
+            id="theme-toggle"
+            class="p-2 rounded-full text-white bg-slate-900 dark:text-slate-900 dark:bg-white"
+    >
+      Toggle theme
+    </button>
+  </div>
+  <!-- Ecrivez le contenu Ã  partir d'ici et supprimez le bloc suivant avant de commencer -->
+  <section class="h-40 w-1/2 mx-auto my-8 flex justify-center items-center">
+    <div class="bg-white  border-gray-500 rounded border-2 shadow-lg overflow-hidden w-96">
+      <div class="px-4 py-5">
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg leading-6 font-medium text-gray-900">My Schedule</h2>
+          <button class="text-indigo-600 hover:text-indigo-900">
+            <span class="hidden sm:inline">Edit</span>
+            <!-- SVG icon for edit -->
+          </button>
+        </div>
+        <div class="mt-5">
+          <div class="flex justify-between items-center bg-gray-50 px-4 py-2 rounded-md">
+            <div class="text-sm font-medium text-gray-500">Tues, Jan 17 2023</div>
+            <div class="text-sm font-medium text-indigo-600">In 45 mins</div>
+          </div>
+          <div class="mt-4">
+            <!-- Accordion toggle button -->
+            <button onclick="toggleAccordion('shift-details')" class="text-left w-full flex justify-between items-center text-sm font-medium text-gray-500 focus:outline-none">
+              <span>Shift name</span>
+              <!-- SVG icon for accordion toggle -->
+              <svg class="fill-current h-4 w-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M5.5 7L10 11.5 14.5 7 16 8.5l-6 6-6-6z"/>
+              </svg>
+            </button>
+            <!-- Accordion content -->
+            <div id="shift-details" class="hidden mt-2">
+              <div class="text-sm text-gray-700">
+                <p>07:00 - 10:00 Drive Thru</p>
+                <p>07:00 - 10:00 Drive Thru</p>
+                <p>07:00 - 10:00 Drive Thru</p>
+                <p>07:00 - 10:00 Drive Thru</p>
+                <p>07:00 - 10:00 Drive Thru</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<script>
+  const btn = document.getElementById("theme-toggle");
+  btn.addEventListener("click", function () {
+    document.body.classList.toggle("dark");
+  });
+  function toggleAccordion(accordionId) {
+    document.getElementById(accordionId).classList.toggle('hidden');
+  }
+</script>
+</body>
+</html>
+</body>
+</html>
